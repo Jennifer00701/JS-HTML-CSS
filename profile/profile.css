@@ -1,0 +1,10 @@
+*{
+    text-align: center;
+}
+
+html{
+    font-family: monospace;
+    background-color: aqua;
+    font-weight: 900;
+    font-size: 20px;
+}
