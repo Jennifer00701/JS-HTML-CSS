@@ -1,0 +1,40 @@
+.chat-screen__texts{
+    padding: 0;
+    list-style-type: none;
+}
+.chat-screen__texts>.text{
+    background-color:greenyellow;
+    width: 280px;
+    height: 50px;
+    margin: 0 0 20px;
+    padding: 10px;
+    border-radius: 10px;
+    line-height: 30px;
+    position:relative;
+    left: 20px;
+}
+
+/* 말풍선 꼬리 만들기 */
+.chat-screen__texts > .text::after{
+    content: "";
+    border-right: 16px solid greenyellow;
+    border-bottom: 16px solid transparent;
+    /* 한쪽면을 투명하게 만들어 깎아서 만든 꼬리  */
+    
+    position: absolute;
+    top: 10px;
+    left: -10px;
+}
+
+.chat-screen__texts > .text:hover{
+    /* 마우스를 올리면 색이 진해지도록 만들기  */
+    background-color: #1c9352;
+    transition: background-color 1500ms 200ms ease-in;
+    /* transition 을 추가해서 color에 대해 투명하게 만들기 1.5초(1500ms) 로 지정 */
+    /* 바뀌는 속도가 점차 증가되도록 ease-in사용  */
+}
+
+.chat-screen__texts > .text:hover::after{
+    border-right: 16px solid #1c9352;
+    transition: border-right 1500ms 200ms ease-in;
+}
