@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적표</title>
+    <h1>조건에 맞게 코드 입력</h1>
+    <h3> 조건 : <br> 1. 인력창을 띄워 사용자의 0~100점 숫자를 받는다 <br><br> 2. 입력창을 받은 점수에 맞는 성적의 등급을 나눈다.</h3>
+    <p></p>
+</head>
+<body>
+
+    </div>
+    <table border ="1">
+        <caption>
+       </caption>
+        <tr>
+            <th> 점수</th>
+            <th>90점 이상</th>
+            <th>80~89점</th>
+            <th>70~79점</th>
+            <th>60~69점</th>
+            <th>60점 미만</th>
+        </tr>
+        <tr>
+            <td>학점</td>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+            <td>F</td>
+        </tr>
+        
+        </table>
+    <script>
+        
+        const p = document.querySelector('p')  
+
+        const num = parseInt(prompt("중간고사 점수를 입력하세요."))
+            if(num>=90){
+                p.textContent = `나의 점수는 ${num}점이고 학점은 A입니다.`
+            }
+            else if(num>=80){
+                p.textContent = `나의 점수는 ${num}점이고 학점은 B입니다.`
+            }
+            else if(num>=70){
+                p.textContent = `나의 점수는 ${num}점이고 학점은 C입니다.`
+            }
+            else if(num>=60){
+                p.textContent = `나의 점수는 ${num}점이고 학점은 D입니다.`
+            }
+            else{
+                p.textContent = `나의 점수는 ${num}점이고 학점은 F입니다.`
+            }
+
+
+    </script>
+<br>
+<hr>
+</body>
+</html>
