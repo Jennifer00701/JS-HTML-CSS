@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  let i = 100;
+  let count = 0;
+
+  while (i < 500) {
+    document.write(i + 4);
+    i += 4;
+    count++;
+
+    if (count % 5 === 0) {
+      document.write("<br>");
+    } else {
+      document.write(", "); 
+    }
+  }
+    </script>
+</body>
+</html>
