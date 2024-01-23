@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "container"></div>
+</body>
+    <script>
+
+
+        function sohee (){
+            const p =document.createElement("p")
+            p.textContent = "새로운 태그"
+            document.querySelector("#container").append(p)
+        }
+
+        sohee()
+        sohee()
+        sohee()
+
+    </script>
+</html>
+
+function sohee () { ... }: sohee라는 이름의 함수를 정의합니다. 
+이 함수는 아무런 매개변수를 가지지 않습니다.
+
+const p = document.createElement("p"): 
+함수 내에서 document.createElement("p")를 사용하여 새로운 
+<p> 태그를 생성하고, 이를 p라는 변수에 저장합니다. 이제 p 변수에는 새로운 
+<p> 요소가 메모리에 생성되었습니다.
+
+p.textContent = "새로운 태그": 이 부분은 p 변수에 저장된 
+<p> 요소의 텍스트 내용을 "새로운 태그"로 설정합니다. 이렇게 함으로써 
+<p> 요소 내에 텍스트가 추가됩니다.
+
+document.querySelector("#container").append(p): 
+document.querySelector("#container")를 사용하여 HTML 문서에서 
+id가 "container"인 요소를 선택합니다. 그리고 append() 메서드를 사용하여 
+이 요소에 p 변수에 저장된 <p> 요소를 추가합니다. 이렇게 하면 "container" 
+요소 내에 <p> 요소가 추가됩니다.
+
+sohee(): 함수를 호출하여 코드 블록을 실행합니다. 이 호출은 함수 내에서 
+<p> 요소를 생성하고 "container" 요소에 추가하는 작업을 수행합니다.
+
+따라서 코드를 실행하면 함수 sohee()가 호출되고, "container"라는 
+ID를 가진 요소 내에 "새로운 태그"라는 텍스트를 가진 <p> 요소가 추가됩니다.

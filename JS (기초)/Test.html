@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function question(n) {
+    let result = [];
+
+    for (let i = 0; i <= n; i += 2) {
+        result.push(i);
+    }
+
+    return result;
+}
+
+Test(
+    question,
+    [[10], [3], [8], [6], [9]],
+    [
+        [0, 2, 4, 6, 8, 10],
+        [0, 2],
+        [0, 2, 4, 6, 8],
+        [0, 2, 4, 6],
+        [0, 2, 4, 6, 8],
+    ]
+);
+
+function Test(question, conditions, results) {
+    for (let index in results) {
+        const result = Array.isArray(results[index])
+            ? JSON.stringify(question(...conditions[index])) === JSON.stringify(results[index])
+            : question(...conditions[index]) === results[index];
+        console.log(`테스트 ${+index + 1}`, result);
+        if (!result) {
+            console.log('테스트에 통과하지 못했습니다.');
+            return;
+        }
+    }
+
+    console.log('테스트에 통과하셨습니다!');
+}
+    </script>
+</body>
+</html>

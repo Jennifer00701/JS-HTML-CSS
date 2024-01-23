@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+    
+    background-color: rgb(252, 245, 245);
+}
+
+.open{
+    text-align: center;
+}
+.Int{
+    color: rgb(138, 138, 138);
+    font-weight : 500;
+}
