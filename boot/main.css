@@ -1,0 +1,142 @@
+
+.new {
+    color: rgb(66, 66, 66);
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.nav {
+    justify-content: center;
+    background : linear-gradient(to bottom right, rgb(54, 67, 184), rgb(98, 30, 181));
+    margin-bottom: 20px;
+}
+
+.container-fluid {
+    background : linear-gradient(to bottom right, rgb(54, 67, 184), rgb(98, 30, 181));
+    
+}
+
+.navbar-brand {
+    font-size: 25px;
+    font-weight: bold;
+    /* 폰드 두껍게 */
+    color: antiquewhite;
+}
+
+.pagination {
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+.coa {
+    text-align: center;
+    /* margin-bottom: 60px; 왜안됨!!! */
+    font-size: 17px;
+}
+
+
+.input_m1{
+    justify-content: space-between;
+    
+}
+
+/* 꾸겨져서 보이는거 왜 그런지 체크 */
+
+.all {
+    display: flex;
+    
+}
+
+
+.col-auto {
+    justify-content: space-between;
+     
+ }
+
+.dropdown {
+    /* float: left; */
+    margin-right: 10px;
+    justify-content: space-between;
+
+
+}
+
+
+.btn {
+    color: rgb(255, 255, 255);
+    font-weight: bold; 
+    margin-left: 20px;
+    font-size: 13px;
+
+    
+}
+
+.btn:hover {
+    background-color: blue;
+}
+
+
+.shop_1 {
+    text-align: center;
+    font-size: 14px;
+}
+
+/* shop 은 따로 hover 안되는지 체크  */
+
+.mon {
+    color: brown;
+}
+
+
+
+.bt_1 {
+    border-radius: 8px;
+    background-color: rgb(88, 89, 94);
+    color: white;
+    padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: right;
+    font-size: 14px;
+
+
+}
+
+.bt_2 {
+    margin-left: 8px;
+    margin-right: 20px;
+    border-radius: 8px;
+    background-color: rgb(88, 89, 94);
+    color: white;
+    padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: right;
+    font-size: 14px;
+}
+
+.bt_1:hover {
+    background-color: blue;
+}
+
+.bt_2:hover {
+    background-color: blue;
+}
+
+.sp {
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    color: rgb(67, 71, 74);
+    
+}
+
+.sp:hover{
+    color: blue;
+}
+
+hr {
+    margin-top: 30px;
+}

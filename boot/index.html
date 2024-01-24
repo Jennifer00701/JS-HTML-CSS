@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="./main.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+      <!-- 상단 네비 -->
+      <div class="nav">
+    <nav class="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="./favicon.png" alt="Logo" width="50" height="50">
+            OZ_Shop
+          </a>
+        </div>
+      </nav>
+    </div>
+
+
+    <h2 class="new">신규 등록 상품 
+        <button class="bt_2"> Join </button>
+        <button class="bt_1"> login </button>
+    </h2>    
+
+  
+
+
+      <!-- 드롭다운 -->
+
+      <div class="all">
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          카테고리
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#"> 상의</a></li>
+          <li><a class="dropdown-item" href="#">하의</a></li>
+          <li><a class="dropdown-item" href="#">신발</a></li>
+          <li><a class="dropdown-item" href="#">패션잡화</a></li>
+        </ul>
+    </div>
+
+    <div class="input_m1">
+        <input style="width: 20%;" type="text" class="form-control" placeholder="제품명을 입력해주세요" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">조 회</button>
+      </div>
+    </div>
+
+
+      <table class="table table-bordered">
+        <table class="table table-hover">
+        <thead class="coa">
+          <tr>
+            <th scope="col">카테고리</th>
+            <th scope="col">브랜드</th>
+            <th scope="col">상품명</th>
+            <th scope="col">가격</th>
+          </tr>
+        </thead>
+        <tbody class="shop_1">
+          <tr>
+            <th scope="row">상의</th>
+            <td>Supreme</td>
+            <td>슈프림 박스 로고 후드티</td>
+            <td style="color: rgb(150, 155, 155)" >390,000 ₩ </td>
+          </tr>
+          <tr>
+            <th scope="row">하의</th>
+            <td>DIESEL</td>
+            <td>디젤 트랙 팬츠</td>
+            <td style="color: rgb(150, 155, 155)" >188,000 ₩ </td>
+          </tr>
+          <tr>
+            <th scope="row">신발</th>
+            <td style="color: red; font-weight: bold;">NIKE (30% off) </td>
+            <td>에어포스1</td>
+            <td style="color: rgb(150, 155, 155)" >137,000 ₩ </td>
+          </tr>
+          <tr>
+            <th scope="row">패션잡화</th>
+            <td>Music&Goods</td>
+            <td>빵빵이키링</td>
+            <td style="color: rgb(150, 155, 155)">29,000 ₩ </td>
+          </tr>
+        </tbody>
+      </table>
+    </table>
+
+    <!-- 페이지네이션 -->
+    <nav aria-label="...">
+        <ul class="pagination">
+          <li class="page-item disabled">
+            <a class="page-link">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+
+      <hr>
+      
+      <span class="sp"> &copy;OZ_Shop</span> <br><br>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
