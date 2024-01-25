@@ -7,6 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link href="./main.css" rel="stylesheet">
 
+    <style>
+      .dark-mode {
+        background-color: rgb(58, 58, 58);
+        color: white;
+      }
+  
+    </style>
 </head>
 
 <body>
@@ -23,38 +30,39 @@
       </nav>
     </div>
 
-
-    <h2 class="new">신규 등록 상품 
-        <button class="bt_2"> Join </button>
+    <h2 class="new">신규 등록 상품
+      <button class="bt_2"> Join </button>
         <button class="bt_1"> login </button>
-    </h2>    
+        <button class="dark_1" onclick="darkmode()"> Change Mode </button>
+      </h2>    
 
-  
 
+      <div class="container">
 
-      <!-- 드롭다운 -->
-
-      <div class="all">
-      <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          카테고리
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#"> 상의</a></li>
-          <li><a class="dropdown-item" href="#">하의</a></li>
-          <li><a class="dropdown-item" href="#">신발</a></li>
-          <li><a class="dropdown-item" href="#">패션잡화</a></li>
-        </ul>
-    </div>
+        <td>
+          <select class="op" name="category">
+            <option value="cate">카테고리</option>
+            <option value="top">상의</option>
+            <option value="pants">하의</option>
+            <option value="shoes">신발</option>
+            <option value="etc">패션잡화</option>
+          </select>
+        </td>
 
     <div class="input_m1">
-        <input style="width: 20%;" type="text" class="form-control" placeholder="제품명을 입력해주세요" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="text" class="form-control"
+        placeholder="제품명을 입력해주세요" aria-label="Username" 
+        aria-describedby="basic-addon1">
       </div>
 
     <div class="col-auto">
         <button type="submit" class="btn btn-primary">조 회</button>
       </div>
+
+      <input class="yyyy" type='date' id='currentDate'/>
     </div>
+
+
 
 
       <table class="table table-bordered">
@@ -70,32 +78,33 @@
         <tbody class="shop_1">
           <tr>
             <th scope="row">상의</th>
-            <td>Supreme</td>
+            <td>Supreme <span class="badge bg-primary rounded-pill">18</span> </td>
             <td>슈프림 박스 로고 후드티</td>
             <td style="color: rgb(150, 155, 155)" >390,000 ₩ </td>
-          </tr>
+           </tr>
           <tr>
             <th scope="row">하의</th>
-            <td>DIESEL</td>
+            <td>DIESEL <span class="badge bg-primary rounded-pill">12</span> </td>
             <td>디젤 트랙 팬츠</td>
             <td style="color: rgb(150, 155, 155)" >188,000 ₩ </td>
-          </tr>
+          </tr>        
+
           <tr>
             <th scope="row">신발</th>
-            <td style="color: red; font-weight: bold;">NIKE (30% off) </td>
-            <td>에어포스1</td>
+           <td class="sho" style="color: red; font-weight: bold;">NIKE (30% off) <span class="badge bg-primary rounded-pill">24</span> </td>
+            <td>에어포스1 </td>
             <td style="color: rgb(150, 155, 155)" >137,000 ₩ </td>
           </tr>
           <tr>
             <th scope="row">패션잡화</th>
-            <td>Music&Goods</td>
+            <td>Music&Goods <span class="badge bg-primary rounded-pill">14</span> </td>
             <td>빵빵이키링</td>
             <td style="color: rgb(150, 155, 155)">29,000 ₩ </td>
           </tr>
         </tbody>
       </table>
     </table>
-
+ 
     <!-- 페이지네이션 -->
     <nav aria-label="...">
         <ul class="pagination">
@@ -112,11 +121,63 @@
           </li>
         </ul>
       </nav>
-
       <hr>
-      
       <span class="sp"> &copy;OZ_Shop</span> <br><br>
+          
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+  <script>
+      
+
+
+
+
+
+        function darkmode() {  
+         var body = document.body;
+         body.classList.toggle("dark-mode");
+         alert('화면 모드를 전환합니다');}
+
+
+        document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10);;
+        // document.getElementById('currentDate') HTML 문서에서 'currentDate'라는 id를 가진 요소를 찾기
+        // value 입력 요소의 값으로 설정
+        // new Date 현재 날짜, 시간 나타내는 JS Date객체 생성
+        // .toISOString 는 Date 객체를 ISO8601 형식 문자열로 변환 
+                  // (ISO 8601 형식은 날짜와 시간 정보를 표준화된 방식으로 나타내는 국제 표준 형식임)
+                  // -> toISOString 메서드가 반환하는 문자는 다음과 같다 (YYYY.MM.DDTHH:mm:ss.sssZ) 
+                  // YYYY: 연도를 나타내는 네 자리 숫자.
+                  // MM: 월을 나타내는 두 자리 숫자 (01부터 12까지).
+                  // DD: 날짜를 나타내는 두 자리 숫자 (01부터 31까지).
+                  // T: 날짜와 시간을 구분하는 구분자 'T'.
+                  // HH: 시간(24시간 형식)을 나타내는 두 자리 숫자 (00부터 23까지).
+                  // mm: 분을 나타내는 두 자리 숫자 (00부터 59까지).
+                  // ss: 초를 나타내는 두 자리 숫자 (00부터 59까지).
+                  // sss: 밀리초를 나타내는 세 자리 숫자 (000부터 999까지).
+                  // Z: 시간대(타임존) 정보를 나타내는 부분. 'Z'는 UTC(세계 표준시)를 의미하며, 'Z'가 아닌 경우 오프셋을 나타냅니다.
+        // substring(0,10)문자열 처음 10개의 문자만 남기고 나머지 자르기(날짜한부분만남겨짐)
+
+   </script>
+
+    <div class="sns">
+
+      <a href="https://github.com/Jennifer00701">
+        <img src="./free-icon-github.png" alt="github" width="27px" height="27px">
+      </a>
+
+      <a href="https://www.facebook.com/?locale=ko_KR">
+        <img src="./free-icon-facebook.png" alt="fackbook" width="27px" height="27px">
+      </a>
+    
+      <a href="https://www.instagram.com/jennifer__yoon/">
+    <img src="./free-icon-instagram.png" alt="instar" width="27px" height="27px" >
+    </a>  
+
+    <a href="https://twitter.com/?lang=ko"></a>
+    <img src="./free-icon-send.png" alt="send" width="27px" height="27px" >
+  </a>  
+
+  </div>
+  
   </body>
 </html>

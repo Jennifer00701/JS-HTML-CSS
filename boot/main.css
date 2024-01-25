@@ -4,6 +4,7 @@
     font-size: 20px;
     margin-left: 20px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .nav {
@@ -32,37 +33,70 @@
 
 .coa {
     text-align: center;
-    /* margin-bottom: 60px; 왜안됨!!! */
     font-size: 17px;
 }
 
 
-.input_m1{
+.form-control{
     justify-content: space-between;
-    
+    font-size: 14px;
+
 }
 
-/* 꾸겨져서 보이는거 왜 그런지 체크 */
+.container {
+    display:flex;
+    float: left;
+    /* 요소가 페이지 또는 부모 요소의 왼쪽 가장자리로 이동 */
+ 
+}
 
-.all {
+
+.table {
+    background-color: white;
+}
+
+.op {
+    /* float: left; */
+    margin-right: 10px;
+    border-radius: 10%;
+    font-weight: bold;
+    background-color:rgb(45, 49, 49);
+    color: white;
+    font-size: 13.5px;
+}
+
+
+.yyyy {
     display: flex;
-    
+    font-size: 15px;
+    color: rgb(75, 74, 74);
+    border-radius: 4%;
+    float: right;
+    border: 2px;
+    /* 요소의 경계선을 스타일링 */
+    justify-content: right;
+    margin-left: 10px;
+    font-weight: bold;
 }
+
 
 
 .col-auto {
     justify-content: space-between;
-     
+
+    /* 플렉스 컨테이너 내의 자식 요소를 메인 축(플렉스 방향)에 
+    따라 정렬하는 방법을 설정하는데 사용 
+    컨테이너 내의 자식 요소들은 남은 공간을 동등하게 나누어 
+    차지하며, 요소들 사이에는 동일한 간격이 유지됨.*/
+    margin-left: -8px;
+    font-size: 13px; 
+    
  }
 
-.dropdown {
-    /* float: left; */
-    margin-right: 10px;
-    justify-content: space-between;
 
-
+.money {
+    font-weight: bold;
 }
-
 
 .btn {
     color: rgb(255, 255, 255);
@@ -117,6 +151,15 @@
     font-size: 14px;
 }
 
+.dark_1 {
+    font-size: 15px;
+    border-radius: 13%;
+    height: 25.5px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
 .bt_1:hover {
     background-color: blue;
 }
@@ -139,4 +182,51 @@
 
 hr {
     margin-top: 30px;
+}
+
+
+@keyframes blink-effect {
+    50% {
+      opacity: 0;
+    }
+  }
+  /* .badge {
+    animation: blink-effect 1s step-end infinite;
+} */
+.sho {
+    animation: blink-effect 1.5s step-end infinite;
+    
+}
+
+/* 이미지 애니메이션 효과 blink-effect */
+
+.sns {
+    margin-left: 20px;
+}
+
+/* .yyyy {
+    margin-left: 20px;
+    justify-content :right;
+    display: flex; */
+
+    /* display: flex 
+    -> 레이아웃 속성을 활성화
+    자식 요소들은 플렉스 컨테이너 내에서 
+    자동으로 배치 및 조정됩
+    디스플레이 조정 가능하도록 ! 
+    flex 안하면 justify 적용 안 됨 */
+
+
+    /* 기본 스타일 */
+body {
+    background : linear-gradient(to bottom right, rgb(165, 174, 255), rgb(249, 244, 255));
+/*    
+    background-color: white; */
+    color: black;
+}
+
+.dark-mode {
+    background : linear-gradient(to bottom right, rgb(17, 17, 20), rgb(89, 82, 96));
+    color: white;
+    
 }
