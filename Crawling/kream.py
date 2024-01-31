@@ -40,7 +40,7 @@ items = soup.select(".product_card")
 num = 1
 for i in items:
     product_name = i.select_one(".translated_name")
-    product_info = i.select_one(".product_info_product_name")
+    product_info = i.select_one(".name")
     money = i.select_one(".amount") 
     review = i.select_one(".review_figure")
     wish = i.select_one(".wish_figure")
