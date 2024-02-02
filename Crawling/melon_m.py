@@ -63,6 +63,7 @@ n1 = soup.select(".swiper_slide.main_home>.service_list.list_album.grid_type>.li
 
 number = 1
 print("<------최신 음악 리스트 입니다.----->")
+print("이곳은 멜론 페이지에 의하여 실시간으로 변동됩니다.")
 print()
 for i in n1 :
     home = i.select_one(".title.ellipsis.line_clamp2")
@@ -76,6 +77,59 @@ for i in n1 :
     number += 1
 
     print("자세히 보기 : https://m2.melon.com/index.htm ")
+    print()
+driver.find_element(By.LINK_TEXT, "티켓").click()
+time.sleep(1)
+
+n2 = soup.select(".ticket.hit>.list")
+
+numm = 1
+print("<----24년 놓치지 말아야 할 공연 리스트입니다.---->")
+html = driver.page_source
+soup = BeautifulSoup(html, "html.parser")
+print()
+for i in n2 :  ###### 이부분 다시 봐야 함 
+    numm += 1
+    Music = i.select_one(".subject.ellipsis")
+    ddy = i.select_one(".date")
+    print([numm])
+    print(f"공연 이름은 : {Music.text}")
+    print(f"공연 날짜는 : {ddy.text}")
+    print()
+    numm += 1
+
+    # ---- 
+    # ddy = i.find("span", {"class": "date"}).find_all(text=True)[0]
+    # place = i.find("span", {"class": "date"}).find_all(text=True)[1]
+    # Music = i.select_one(".subject.ellipsis")
+    # print([numm])
+    # print(f"공연 이름은 : {Music.text}")
+    # print(f"공연 날짜는 : {ddy}")
+    # print(f"공연 장소는 : {place}")
+    
+
+driver.find_element(By.LINK_TEXT, "콘서트 랭킹").click()
+time.sleep(1)
+
+print("<----콘서트/패스티벌 랭킹 순위 입니다.---->")
+time.sleep(1)
+html = driver.page_source
+soup = BeautifulSoup(html, "html.parser")
+
+# 이 부분이 핵심 콘서트 패스티벌 랭킹 순위로 이동 하였지만 
+# 그 부분에서의 html/css/js 코드는이전과는 분명 다름 
+# 그렇기 때문에 다시 한번 코드를 받아와서파싱을 진행해야 
+# 그 위치에서 찾고자 하는 클래스, 아이디, 태그 등등을 찾을 수 있음
+
+time.sleep(1)
+festi = soup.select(".list_ranking, .inner")
+time.sleep(1)
+
+for i in festi:
+    title = i.select_one(".tit")
+    print(f" 제목 : {title.text}")
+
+
 # 제목 가수 소개 가져오기 .
     #/ 월기준 상승한 클레스, 다운 거르기 - 상승한 순위 - 과제 / 어제 
 # id 가 똑같을 때 (find_element는 하나 elements 는 여러개 뽑을 수 있음)
