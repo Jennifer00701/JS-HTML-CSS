@@ -81,32 +81,22 @@ for i in n1 :
 driver.find_element(By.LINK_TEXT, "티켓").click()
 time.sleep(1)
 
-n2 = soup.select(".ticket.hit>.list")
+n2 = soup.select(".ticket.hit > ul > li")
 
 numm = 1
 print("<----24년 놓치지 말아야 할 공연 리스트입니다.---->")
-html = driver.page_source
-soup = BeautifulSoup(html, "html.parser")
 print()
-for i in n2 :  ###### 이부분 다시 봐야 함 
-    numm += 1
+for i in n2:
+    place = i.select_one(".date")
     Music = i.select_one(".subject.ellipsis")
-    ddy = i.select_one(".date")
     print([numm])
-    print(f"공연 이름은 : {Music.text}")
-    print(f"공연 날짜는 : {ddy.text}")
-    print()
+    print(f"공연 이름은 : {Music}")
+    # print(f"공연 날짜는 : {ddy}")
+    print(f"공연 장소는 : {place}")
+
     numm += 1
 
-    # ---- 
-    # ddy = i.find("span", {"class": "date"}).find_all(text=True)[0]
-    # place = i.find("span", {"class": "date"}).find_all(text=True)[1]
-    # Music = i.select_one(".subject.ellipsis")
-    # print([numm])
-    # print(f"공연 이름은 : {Music.text}")
-    # print(f"공연 날짜는 : {ddy}")
-    # print(f"공연 장소는 : {place}")
-    
+
 
 driver.find_element(By.LINK_TEXT, "콘서트 랭킹").click()
 time.sleep(1)

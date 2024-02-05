@@ -6,7 +6,12 @@
     <title>회원가입양식만들기</title>
     <link href="./join.css" rel="stylesheet">
 </head>
-<h2 class="open"> 회원가입 양식 </h2>
+
+<h1 class="open"> Member Join </h1>
+
+<div class="imgs">
+<img class="img" src="./favicon.png" alt="img"> 
+</div>
 <body>
 
     <div id = "container">
@@ -15,13 +20,13 @@
               <tr> 
                 <th> 아이디 </th>  
               <td>
-              <input name = "Id" placeholder="아이디" autocomplete="off" required>
+              <input class="to" name = "Id" placeholder="아이디" autocomplete="off" required>
             </td>
             </tr>
             <tr> 
                 <th> 비밀번호 </th>  
               <td>
-              <input type = "password" name="Pw1" placeholder="비밀번호" required>
+              <input class="to" type = "password" name="Pw1" placeholder="비밀번호" required>
               <!-- type=password 로 설정되어 있으면 입력한 비밀번호를 숨겨서 보여준다
               일반적으로 (*) 표시, name은 해당 필드의 이름, placeholder 속성은
               필드에 힌트 텍스트를 제공할 때 사용됨 (사용자가 입력할 내용) -->
@@ -30,35 +35,34 @@
             <tr> 
                 <th> 비밀번호 확인 </th>  
               <td>
-              <input type = "password" name="Pw2" placeholder="비밀번호 확인" required>
+              <input class="to" type = "password" name="Pw2" placeholder="비밀번호 확인" required>
           </td>
             </tr>
         </tr>
         <tr> 
             <th> 이름 </th>  
           <td>
-          <input name="Name" placeholder="사용자 이름" required>
+          <input class="to" name="Name" placeholder="이름을 입력해주세요" required>
       </td>
         </tr>
     </tr>
     <tr> 
         <th> 전화번호 </th>  
       <td>
-      <input name="Phone" placeholder="휴대전화번호 입력" required>
+      <input class="to" name="Phone" placeholder="휴대전화번호를 입력해주세요" required>
   </td>
     </tr>
 </tr>
 <tr> 
     <th> 이메일 </th>  
   <td>
-  <input name="Email" type="email" placeholder="이메일을 입력해주세요" required>
-</td>
-</tr>
-
+  <input class="to" name="Email" type="email" placeholder="이메일 (example@example.com)" required>
+  </td>
+  </tr>
 <tr> 
     <th> 원하는직무 </th>  
   <td>
-  <select name="Position">
+  <select class="op" name="Position">
     <option value="developer">개발자</option>
     <option value="designer">웹디자이너</option>
     <option value="manager">기획자</option>
@@ -66,9 +70,10 @@
   </select>
 </td>
 </tr>
+<div>
 <tr>
     <th></th>
-    <td>
+    <td class="gen">
         <label>
             <input type="radio" name="Gender" value="male" checked>  남자
         </label>
@@ -77,13 +82,16 @@
         </label>        
     </td>
 </tr>
+</div>
 <tr> 
     <th> 자기소개 </th>  
   <td>
 <textarea class="Int" name="Intro"> 선택사항 </textarea>
 </td>
 </tr>
-            </table>
+
+</table>
+           
             <div class="buttons">
                 <input type="submit" value="가입" class="btn" title="가입">
                 <input type="reset" value="리셋" class="btn" title="처음으로">
